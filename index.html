@@ -1,0 +1,93 @@
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nosso Amor</title>
+    <footer class="site-footer">
+    Feito com amor por Roberta 💖
+</footer>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stley.css" />
+</head>
+<body>
+
+    <button class="music-button" onclick="toggleMusic()">🎵 Música</button>
+
+    <div class="full-screen" id="home">
+        <h1>“365 dias ao seu lado 💕”</h1>
+        <img src="WhatsApp Image 2025-07-14 at 19.59.37 (2).jpeg" alt="Foto de vocês" style="width: 300px; border-radius: 10px;" />
+        <button class="button" onclick="showTimeline()">Clique para começar nossa história</button>
+    </div>
+
+    <div class="timeline full-screen hidden" id="timeline">
+        <h2>Linha do Tempo do Amor</h2>
+        <ul>
+            <li>Primeiro encontro - <img src="WhatsApp Image 2025-07-14 at 19.59.39 (3).jpeg" alt="Primeiro Encontro" style="width: 100px;" /></li>
+            <li>Primeiro Natal juntos - <img src="WhatsApp Image 2025-07-14 at 19.59.39 (1).jpeg" alt="Primeiro Natal" style="width: 100px;" /></li>
+            <li>Primeira vez que eu fui na sua mãe - <img src="WhatsApp Image 2025-07-14 at 19.59.37.jpeg" alt="Primeira vez na mãe" style="width: 100px;" /></li>
+            <li>Nosso primeiro Ano Novo juntos - <img src="WhatsApp Image 2025-07-14 at 19.59.39.jpeg" alt="Ano Novo" style="width: 100px;" /></li>
+        </ul>
+        <button class="button" onclick="showLoveLetter()">Leia a Cartinha de Amor</button>
+    </div>
+
+    <div class="love-letter full-screen hidden" id="loveLetter">
+        <h2>Cartinha de Amor Virtual</h2>
+        <p>Oi, meu momozinho 💖</p>
+        <p>Hoje faz 1 ano que estamos juntos, e eu só consigo pensar no quanto esse tempo foi incrível ao seu lado. Eu te amo muito 
+            e quero passar muitos e muitos anos da minha vida ao seu lado. Te amo muito, meu marido perfeito!</p>
+        <p>Te amo demais 💗</p>
+        <button class="button" onclick="showLoveList()">Lista de Coisinhas que Amo em Você</button>
+    </div>
+
+    <div class="love-list full-screen hidden" id="loveList">
+        <h2>Lista de Coisinhas que Amo em Você</h2>
+        <ul>
+            <li>1- seus beijinhos</li>
+            <li>2- vc nao ficar bravo comigo por eu esquecer o ponto</li>
+            <li>3- vc ser sempre carinhoso cmg</li>
+            <li>4- sua paciencia</li>
+            <li>5- conversar com vvc e o jeito que vc sempre me entende</li>
+            <li>6- seu jeito</li>
+            <li>7- seu amor cmg</li>
+            <li>8- como vc é inteligente</li>
+            <li>9- tudo em vc</li>
+        </ul>
+        <button class="button" onclick="showMemoryGame()">Jogo da Memória do Amor</button>
+    </div>
+
+    <div class="memory-game full-screen hidden" id="memoryGame">
+        <h2>🧩 Jogo da Memória do Amor</h2>
+        <div id="memory-board">
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.59.38 (1).jpeg" alt="1"></div>
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.59.37 (1).jpeg" alt="2"></div>
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.59.39 (2).jpeg" alt="3"></div>
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.59.38 (1).jpeg" alt="1"></div>
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.59.37 (1).jpeg" alt="2"></div>
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.59.39 (2).jpeg" alt="3"></div>
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.57.32.jpeg" alt="4"></div>
+            <div class="memory-card" onclick="flipCard(this)"><img src="WhatsApp Image 2025-07-14 at 19.57.32.jpeg" alt="4"></div>
+        </div>
+        <button class="button" onclick="showSurprise()">Clique aqui para ver a surpresa</button>
+    </div>
+
+    <div class="surprise full-screen hidden" id="surprise">
+        <p>💛 VC GANHOU UM DATE ESPECIAL, DIA 19, DEPOIS DO SEU SERVIÇO, NA MINHA CASA 💛</p>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Corações caindo
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        } , 300);
+    </script> 
+</body>
+</html>

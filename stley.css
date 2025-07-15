@@ -1,0 +1,129 @@
+ body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #ffccff, #e6e6fa);
+}
+
+.full-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #ff1493;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Jogo da Memória */
+#memory-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 700px;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.memory-card.flip img {
+    transform: rotateY(0deg);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: transform 0.4s;
+}
+
+/* Música */
+.music-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 9999;
+}
+
+/* Corações Caindo */
+.heart {
+    position: fixed;
+    top: -10px;
+    color: pink;
+    font-size: 24px;
+    animation: fall 5s linear infinite;
+    z-index: 0;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #888;
+}
